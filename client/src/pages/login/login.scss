@@ -1,0 +1,59 @@
+@import "src/style/variables";
+
+.sb-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+  height: 40%;
+  border-radius: 4px;
+  background-color: $color-white;
+
+  &__wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__input {
+    outline: none;
+    border: none;
+    margin-bottom: $spacer-6;
+    border-bottom: 1px solid $color-grey-1;
+  }
+
+  &__button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 4px;
+    color: $color-white;
+    background-color: $color-primary;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $color-blue;
+    }
+  }
+
+  &__error-msg {
+    color: $color-error;
+    margin-top: $spacer-5;
+  }
+
+  &__error-msg-wrap {
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+
+    &.is-active {
+      max-height: 999px;
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}

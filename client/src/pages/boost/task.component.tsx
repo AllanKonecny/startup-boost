@@ -9,7 +9,7 @@ import { AxiosError } from "axios";
 interface ITaskComp {
     task: ITask;
     stageId: number;
-    onUpdate: (stage: IStage) => void;
+    onUpdate: () => void;
 }
 
 const Task: React.FC<ITaskComp> = (props) => {
@@ -27,7 +27,7 @@ const Task: React.FC<ITaskComp> = (props) => {
 
                 if (res.status === 200) {
                     setChecked(!checked);
-                    props.onUpdate(res.data.data);
+                    props.onUpdate();
                 }
             } catch (err) {
                 const error = err as AxiosError;

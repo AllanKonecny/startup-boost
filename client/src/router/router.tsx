@@ -1,6 +1,7 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
 import BoostPage from "pages/boost/boost.page";
 import LoginPage from "pages/login/login.page";
+import RandomFactPage from "pages/random-fact/random-fact.page";
 
 const AppRouter = () => {
     return (
@@ -13,6 +14,9 @@ const AppRouter = () => {
             </Route>
             <Route exact path="/boost">
                 <BoostPage />
+            </Route>
+            <Route exact path="/random-fact">
+                <RandomFactPage />
             </Route>
         </Switch>
     )
