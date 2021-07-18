@@ -1,0 +1,103 @@
+@import "src/style/variables";
+
+.sb-boost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $color-white;
+  min-width: 25%;
+  border-radius: 8px;
+  padding: $spacer-9;
+  margin: auto;
+  align-items: flex-start;
+
+  &__header {
+    font-size: $font-size-7;
+    font-weight: $font-weight-2;
+    margin-bottom: $spacer-9;
+  }
+
+  &__stage {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-bottom: $spacer-8;
+  }
+
+  &__stage-header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__stage-number {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: $spacer-4;
+    text-align: center;
+    background-color: $color-black;
+    color: $color-white;
+    border-radius: 100%;
+  }
+
+  &__stage-title {
+    font-size: $font-size-7;
+    font-weight: $font-weight-2;
+  }
+
+  &__check-icon {
+    margin-left: auto;
+    font-size: $font-size-8;
+  }
+
+  &__task-list {
+    margin-top: $spacer-4;
+    margin-left: $spacer-2;
+  }
+
+  &__task {
+    display: flex;
+    align-items: center;
+    margin-top: $spacer-2;
+    cursor: pointer;
+  }
+
+  &__check-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    margin-right: $spacer-2;
+    border-radius: 4px;
+    border: 1px solid $color-black;
+    transition: all 0.2s ease-in-out;
+
+    &.is-checked {
+      background-color: $color-blue;
+    }
+  }
+
+  &__check-box-icon {
+    color: $color-white;
+    font-weight: $font-weight-3;
+    font-size: $font-size-4;
+  }
+
+  &__task-err-wrap {
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+
+    &.is-active {
+      max-height: 999px;
+      opacity: 1;
+    }
+  }
+
+  &__task-err-message {
+    color: $color-error;
+  }
+}
