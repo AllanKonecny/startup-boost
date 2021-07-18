@@ -1,6 +1,8 @@
 tags:
   - name: users
     description: users API
+  - name: boost
+    description: startup boost API
 
 paths:
   # [GET] users
@@ -103,6 +105,39 @@ paths:
         500:
           description: 'Server Error'
 
+  # [GET] boost
+  /boost:
+    get:
+      tags:
+        - boost
+      summary: get all stages with tasks
+      responses:
+        200:
+          descirption: 'OK'
+
+    # [PUT] boost
+    put:
+      tags:
+        - boost
+      summary: 'update task within stage'
+      parameters:
+        - name: stageId
+          in: query
+          description: stage Id
+          required: true
+          type: integer
+        - name: taskId
+          in: query
+          description: task id
+          required: true
+        - name: body
+          in: body
+          description: update data
+          required: true
+          schema:
+            $ref: '#/definitions/updateBoost'
+
+
 # definitions
 definitions:
   users:
@@ -120,6 +155,14 @@ definitions:
       password:
         type: string
         description: user Password
+  updateBoost:
+    type: object
+    required:
+      - isChecked
+    properties:
+      isChecked:
+        type: boolean
+        description: task is done / not done
 
 
 schemes:
