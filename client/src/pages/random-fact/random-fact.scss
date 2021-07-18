@@ -1,8 +1,18 @@
 @import "src/style/variables";
 
 .sb-fact {
-  font-size: $font-size-7;
-  font-weight: $font-weight-2;
-  max-width: 40%;
+  font-size: $font-size-8;
+  font-weight: $font-weight-3;
+  max-width: 50%;
   text-align: center;
+
+  @include tablet() {
+    font-size: $font-size-7;
+    max-width: 60%;
+  }
+  @include mobile() {
+    font-size: $font-size-6;
+    font-weight: $font-weight-2;
+    max-width: 80%;
+  }
 }

@@ -10,6 +10,13 @@
   border-radius: 4px;
   background-color: $color-white;
 
+  @include tablet() {
+    width: 55%;
+  }
+  @include mobile() {
+    width: 80%;
+  }
+
   &__wrap {
     display: flex;
     align-items: flex-start;

@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { IRandomFact } from "../interfaces/random-fact.interface";
+import { IRandomFact } from "interfaces/random-fact.interface";
 
 class RandomFactService {
     private _baseUrl = 'https://uselessfacts.jsph.pl/random.json?language=en';
