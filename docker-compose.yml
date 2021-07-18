@@ -6,7 +6,8 @@ services:
       context: ./client
       dockerfile: Dockerfile
     volumes:
-      - './client:/usr/src/app'
+      - ./client:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
       - "3000:3000"
     stdin_open: true
