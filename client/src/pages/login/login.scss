@@ -7,7 +7,7 @@
   flex-direction: column;
   width: 30%;
   height: 40%;
-  border-radius: 4px;
+  border-radius: $border-radius-2;
   background-color: $color-white;
 
   @include tablet() {
@@ -37,7 +37,7 @@
     border: none;
     width: 80px;
     height: 30px;
-    border-radius: 4px;
+    border-radius: $border-radius-2;
     color: $color-white;
     background-color: $color-primary;
     transition: all 0.2s ease-in-out;

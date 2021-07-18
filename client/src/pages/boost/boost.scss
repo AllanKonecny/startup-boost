@@ -6,10 +6,9 @@
   justify-content: center;
   background-color: $color-white;
   min-width: 25%;
-  border-radius: 8px;
+  border-radius: $border-radius-4;
   padding: $spacer-9;
   margin: auto;
-  max-width: 400px;
   align-items: flex-start;
 
   @include tablet() {
@@ -54,7 +53,7 @@
     text-align: center;
     background-color: $color-black;
     color: $color-white;
-    border-radius: 100%;
+    border-radius: $border-radius-full;
   }
 
   &__stage-title {
@@ -86,7 +85,7 @@
     width: 15px;
     height: 15px;
     margin-right: $spacer-2;
-    border-radius: 4px;
+    border-radius: $border-radius-2;
     border: 1px solid $color-black;
     transition: all 0.2s ease-in-out;
 
