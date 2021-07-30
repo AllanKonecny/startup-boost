@@ -8,9 +8,9 @@ class BoostController {
 
     public getBoost = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         try {
-            const findAllUsersData: IStage[] = await this.boostService.getBoost();
+            const findBoostData: IStage[] = await this.boostService.getBoost();
 
-            res.status(200).json({ data: findAllUsersData, message: 'OK' });
+            res.status(200).json({ data: findBoostData, message: 'OK' });
         } catch (error) {
             next(error);
         }
